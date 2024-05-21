@@ -1,0 +1,25 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/applicationContext.xml</param-value>
+</context-param>
+<servlet>
+<servlet-name>DBConnect</servlet-name>
+<servlet-class>com.db.DBConnect</servlet-class>
+<load-on-startup>2</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>DBConnect</servlet-name>
+<url-pattern>/DBconnect</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>TestMail</servlet-name>
+<url-pattern>/TestMail</url-pattern>
+</servlet-mapping>
+<session-config>
+<session-timeout> 30 </session-timeout>
+</session-config>
+<welcome-file-list>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+</web-app>
